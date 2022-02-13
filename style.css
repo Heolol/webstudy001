@@ -1,0 +1,94 @@
+:root {
+  --text-color: #444444;
+  --white-color: #ffffff;
+}
+
+body {
+  margin: 0;
+  font-family: "Source Sans Pro";
+}
+
+a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: bisque;
+}
+
+.nav__logo {
+  margin: 5px 20px;
+  font-size: 30px;
+}
+
+.nav__menu {
+  display: flex;
+  list-style: none;
+  padding-left: 0;
+}
+
+.nav__menu li {
+  padding: 8px 12px;
+}
+
+.nav__site {
+  display: flex;
+  list-style: none;
+  padding-left: 0;
+}
+
+.nav__site i {
+  padding: 8px 5px;
+}
+
+.nav__menu li:hover {
+  background-color: salmon;
+  border-radius: 4px;
+}
+
+.nav__toggleBtn {
+  position: absolute;
+  right: 32px;
+  font-size: 24px;
+  color: #d49466;
+  display: none;
+}
+
+@media screen and (max-width: 750px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 8px 24px;
+  }
+
+  .nav__menu {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .nav__menu li {
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav__site {
+    display: none;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .nav__toggleBtn {
+    display: block;
+  }
+
+  .nav__menu.active,
+  .nav__site.active {
+    display: flex;
+  }
+}
